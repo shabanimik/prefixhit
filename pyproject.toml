@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shabanimik-prefixhit"
+version = "0.1.0"
+description = "按公共前缀长度分档统计命中率，标出未命中的主要长度区间"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "shabanimik" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://shabanimik.github.io"
+Repository = "https://github.com/shabanimik/prefixhit"
+Issues = "https://github.com/shabanimik/prefixhit/issues"
+
+[project.scripts]
+prefixhit = "prefixhit:main"
+
+[tool.setuptools]
+py-modules = ["prefixhit"]
